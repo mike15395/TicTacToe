@@ -4,8 +4,8 @@ echo "Welcome to TIC-TAC-TOE Game!"
 arr=(- - - - - - - - -) # intialized empty array with 9 elements
 
 
-#player 1 x
-#player 2 o
+#player 1(HUMAN) x
+#player 2(COMPUTER) o
 player1symbol='x' #constants
 player2symbol='o'
 
@@ -21,16 +21,31 @@ function input()		#function to accept user input
 {
 
 	echo "Enter Position"
-	read position
+	read pos_hum
 
-	if [[ ${arr[$position]} == "-" ]];
+	if [[ ${arr[$pos_hum]} == "-" ]];
 	then
 
-				arr[$position]=$sym
+				arr[$pos_hum]=$sym
 	else
 		 	echo "Wrong position"
 	fi
 
+}
+
+function computerinput()
+{
+	#while (( pos_hum != pos_com ))
+	#do
+		pos_com=$[(RANDOM%9)]
+	#done
+	if [[ ${arr[$pos_com]} == "-" ]];
+	then
+
+				arr[$pos_com]=$sym
+	else
+		 	echo "Wrong position"
+	fi
 }
 
 function wincheck()		#checking adjacent cells
@@ -100,14 +115,14 @@ function main
 
 		if (( flag == 0))
 		then
-			echo "Player 2(o)"
+			echo "COMPUTER (o)"
 			sym=$player2symbol
-			input
+			computerinput
 			((++count))
 			wincheck
 					if (( game == 0 ))
 					then
-						echo "Player 2 WON"
+						echo "COMPUTER  WON"
 						display_matrix
 						break;
 					fi
