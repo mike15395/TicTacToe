@@ -1,7 +1,7 @@
 # TicTacToe
-contains code for tictactoe game in shell script
+This repo contains code for tictactoe game in shell script!!
 
-This is a very simplified version of Tic Tac Toe Game.
+This is a very simplified version of Tic Tac Toe Game (using 1D array).
 Code contains 6 functions (1 main function and 5 other functions)
 
 I started to code this with two human players then refactored it and added computer player
