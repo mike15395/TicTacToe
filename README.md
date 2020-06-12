@@ -11,7 +11,7 @@ it in a cell.
 Execution starts from main where first board is displayed using display function then input 
 is received from human first then computer. This goes on till any one player wins the game or draws.
 
-At the end of game it shows history of all human as well as commputer moves.
+At the end of game it shows history of all human as well as computer moves.
 
 I know more code refactoring is needed since human has higher probablity to win this game.
 Refactoring of computer playing like human is needed in code. So that both play equally and
